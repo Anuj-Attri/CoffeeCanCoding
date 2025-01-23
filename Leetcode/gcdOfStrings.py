@@ -3,6 +3,8 @@
 # Given two strings str1 and str2, return the largest string x such that x divides both str1 and str2.
 
 # Time: O(N)
+# Space: O(1)
+
 ''' 
 Gist:
 Let x be the GCD of str1 and str2, then length of x is equal to the GCD of lengths of str1 and str2. 
