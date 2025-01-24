@@ -18,7 +18,7 @@ The stop condition is always that the left index pointer should be less than the
 Time: O(N)
 Space: O(N)
 
-Limitation: will throw issues if characters outside ascii are used. Can be resolved by increasing the vowels set.
+Limitation: Will throw issues if characters outside ascii are used. Can be resolved by increasing the vowels set.
 '''
 
 class Solution:
