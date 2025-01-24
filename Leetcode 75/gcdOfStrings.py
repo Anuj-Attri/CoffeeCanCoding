@@ -22,8 +22,8 @@ class Solution:
         # Assign a substring of length n
         s = str1[:n]
 
-        # Check for divisibility
-        if str1 == s *(len(str1)//n) and str2 == s * (len(str2)//n):
+        # Check for multiplicity
+        if str1 == s * (len(str1)//n) and str2 == s * (len(str2)//n):
             return s
         else:
             return ""
