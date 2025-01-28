@@ -10,6 +10,9 @@ Gist:
 Using the double pointer method, we traverse one ptr (i) over elements and keep the other ptr (ctr) on the last non-zero element.
 Swap elements when non zero element is found.
 
+Time: O(N)
+Space: O(1)
+
 '''
 
 class Solution:
