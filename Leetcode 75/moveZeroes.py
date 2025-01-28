@@ -7,6 +7,8 @@ Note that you must do this in-place without making a copy of the array.
 
 '''
 Gist:
+Using the double pointer method, we traverse one ptr (i) over elements and keep the other ptr (ctr) on the last non-zero element.
+Swap elements when non zero element is found.
 
 '''
 
@@ -15,8 +17,8 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        N = len(nums)
-        for i in range(N):
-            if nums[i] == 0:
-                nums.pop(i)
-                nums.append
+        ctr = 0 
+        for i in range(len(nums)):
+            if nums[i] != 0:
+                nums[i], nums[ctr] = nums[ctr], nums[i]
+                ctr += 1
