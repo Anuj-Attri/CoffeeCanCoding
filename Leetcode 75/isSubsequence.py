@@ -30,6 +30,7 @@ class Solution:
             if s[flag] == i:
                 flag += 1
 
+            # Avoid out-of-index when the check is already satisfied
             if flag == len(s):
                 return True
 
