@@ -11,7 +11,19 @@ Return the leftmost pivot index. If no such index exists, return -1.
 '''
 '''
 Gist:
+The total sum of the array = left_sum + right_sum + nums[i]; 
+where i is the index of an element during iteration,
+left_sum is the sum of all elements left of 'i' and 
+right_sum is sum of all elements right of 'i'.
 
+For i to be pivot index, left_sum = right_sum.
+Thus, equation becomes:
+total = 2*left + nums[i] 
+=> left = total - left - nums[i] 
+=> Above check returns True only if 'i' is the pivot index.
+
+Time: O(N)
+Space: O(1)
 '''
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:       # Function returns an integer
