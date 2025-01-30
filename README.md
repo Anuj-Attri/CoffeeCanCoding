@@ -31,7 +31,7 @@ In the world of personal growth and skill development, consistency and patience 
 
 ## 💡 Clone the Repository
    ```
-   [git clone https://github.com/yourusername/CoffeeCanCoding.git](https://github.com/Anuj-Attri/CoffeeCanCoding.git)
+   git clone https://github.com/Anuj-Attri/CoffeeCanCoding.git
    ```
 
 ## 📜 License
