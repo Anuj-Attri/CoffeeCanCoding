@@ -9,3 +9,17 @@ This also applies to the right edge of the array.
 
 Return the leftmost pivot index. If no such index exists, return -1.
 '''
+'''
+Gist:
+
+'''
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:       # Function returns an integer
+        total_sum = sum(nums)
+        left_sum = 0
+
+        for i in range(len(nums)):
+            if left_sum == total_sum - left_sum - nums[i]:  # Checking for pivot index
+                return i
+            left_sum += nums[i]                         # Updating left_sum
+        return -1 
