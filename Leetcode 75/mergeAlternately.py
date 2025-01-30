@@ -9,6 +9,9 @@ Return the merged string.
 '''
 Gist:
 Nested for-loop can be used, but a while-loop proves to be more scalable.
+
+Time: O(N + M) => O(K)
+Space: O(N + M) => O(K)
 '''
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
