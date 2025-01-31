@@ -25,7 +25,4 @@ Note: In-place substitution method helps reduce space complexity down to constan
 
 class Solution:
     def reverseWords(self, s: str) -> str:
-        str_list = s.split()
-        print(str_list)
-        str_list.reverse()
-        return " ".join(str_list)
+        return " ".join(s.split()[::-1])
