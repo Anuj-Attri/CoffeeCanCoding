@@ -22,3 +22,10 @@ Spcae: O(N)
 
 Note: In-place substitution method helps reduce space complexity down to constant space.
 '''
+
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        str_list = s.split()
+        print(str_list)
+        str_list.reverse()
+        return " ".join(str_list)
