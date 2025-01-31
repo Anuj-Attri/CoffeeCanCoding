@@ -30,8 +30,8 @@ In the world of personal growth and skill development, consistency and patience 
 ---
 
 ## 💡 Clone the Repository
-   ```bash
-   git clone https://github.com/yourusername/CoffeeCanCoding.git
+   ```
+   git clone https://github.com/Anuj-Attri/CoffeeCanCoding.git
    ```
 
 ## 📜 License
