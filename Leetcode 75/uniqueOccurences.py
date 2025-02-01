@@ -5,7 +5,12 @@ Given an array of integers arr, return true if the number of occurrences of each
 
 '''
 Gist:
+Using the 'Counter' function, we can create a dictionary that counts the occurences of unique elements within an array.
+Extracting the values of the dictionary (hash map) 'count' and coverting them to set gives us all the unique counts.
+Comparing the length of unique counts with the original value returns if two elements appear the same number of times or not.
 
+Time: O(N)
+Space: O(N)
 '''
 
 from collections import Counter
