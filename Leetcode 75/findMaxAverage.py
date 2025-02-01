@@ -7,7 +7,15 @@ Any answer with a calculation error less than 10-5 will be accepted.
 '''
 
 '''
+Gist:
+Instead of computing averages, we find the sum of all elements in the first 'k' window to initialize max_sum and window_sum.
+The loop is start at kth element and works towards the end of array. 
+For each iteration, the leftmost element of the last window is subtracted, and the next element is added, updating the window_sum.
+window_sum is compared to max_sum, and max_sum is updated accordingly.
+The final average is returned by dividing the max_sum by 'k'.
 
+Time: O(N)
+Space: O(1)
 '''
 
 class Solution:
