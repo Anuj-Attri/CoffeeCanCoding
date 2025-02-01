@@ -9,6 +9,12 @@ You must write an algorithm that runs in O(n) time and without using the divisio
 
 '''
 Gist:
+The problem does not allow division, hence a different approach is taken. 
+Two loops are used to calculate the product of elements right-most and left-most of an index.
+Answer[i] = left_product[i] * right_product[i]; as neither of the products include the element at index 'i'.
+
+Time: O(N)
+Space: O(N)
 
 '''
 
