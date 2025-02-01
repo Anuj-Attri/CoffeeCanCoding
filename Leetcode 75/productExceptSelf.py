@@ -6,3 +6,25 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 
 You must write an algorithm that runs in O(n) time and without using the division operation.
 '''
+
+'''
+Gist:
+
+'''
+
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        N = len(nums)
+        answer = [1] * N
+
+        left_product = 1
+        for i in range(N):
+            answer[i] = left_product
+            left_product *= nums[i]
+        
+        right_product = 1
+        for i in range(N - 1, -1, -1):
+            answer[i] *= right_product
+            right_product *= nums[i]
+
+        return answer
