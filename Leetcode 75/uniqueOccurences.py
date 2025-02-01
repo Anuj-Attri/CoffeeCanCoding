@@ -11,6 +11,9 @@ Comparing the length of unique counts with the original value returns if two ele
 
 Time: O(N)
 Space: O(N)
+
+Note: 
+Dynamically checking the frequency of unique values may reduce the space complexity to constant space, but affects the readability of code.
 '''
 
 from collections import Counter
