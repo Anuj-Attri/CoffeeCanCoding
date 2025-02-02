@@ -14,7 +14,15 @@ You must write an algorithm that uses only constant extra space.
 '''
 
 '''
+Gist:
+Using two pointers (rx, wx) for traversing and in-place changes respectively, we count the consecutive occurences of each character.
+Pointer rx is updated when consecutive characters are found, whereas wx is updated when the character changes.
+If count of character occurences is more than one, count is casted to string and inserted at index 'wx'.
+Pointer 'wx' is updated accordingly.
+A dry run with example is the best explanation for this problem.
 
+Time: O(N)
+Space: O(1)
 '''
 
 class Solution:
