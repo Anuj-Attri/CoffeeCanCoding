@@ -12,3 +12,29 @@ After you are done modifying the input array, return the new length of the array
 
 You must write an algorithm that uses only constant extra space.
 '''
+
+'''
+
+'''
+
+class Solution:
+    def compress(self, chars: List[str]) -> int:
+        rx, wx = 0, 0
+
+        while rx < len(chars):
+            char = chars[rx]
+            count = 0
+
+            while rx < len(chars) and chars[rx] == char:
+                rx += 1
+                count += 1
+
+            chars[wx] = char
+            wx += 1
+
+            if count > 1:
+                for i in str(count):
+                    chars[wx] = i
+                    wx += 1
+
+        return wx
