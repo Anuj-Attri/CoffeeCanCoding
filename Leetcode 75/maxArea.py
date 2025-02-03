@@ -13,3 +13,22 @@ Gist:
 
 '''
 
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        left = 0
+        right = len(height) - 1
+        area = 0
+
+        while left < right:
+            min_height = min(height[left], height[right])
+            area = max(area, (right - left) * min_height)
+            
+            if height[left] == min_height:
+                while left < right and height[left] <= min_height:
+                    left += 1
+            
+            else:
+                while left < right and height[right] <= min_height:
+                    right -= 1
+
+        return area
