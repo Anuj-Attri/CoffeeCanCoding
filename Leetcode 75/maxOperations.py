@@ -17,6 +17,7 @@ The operation continues until left > right, and returns the value of count at th
 Time: O(N log N)
 Space: O(1)
 
+Note: using a dictionary can reduce the time taken to linear time, as it eliminates the need for sorting.
 '''
 
 class Solution:
