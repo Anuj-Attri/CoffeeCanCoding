@@ -7,6 +7,15 @@ Return the maximum number of operations you can perform on the array.
 '''
 
 '''
+Gist:
+We sort the nums array ascendingly, to keep the computation in linear time.
+Set the two pointers (left and right) and the extremes of 'nums'.
+For every 'numsum' equal to 'k', we increment the count.
+Since the array is sorted, if numsum is less than k, we increment the left pointer and vice versa.
+The operation continues until left > right, and returns the value of count at the end.
+
+Time: O(N log N)
+Space: O(1)
 
 '''
 
