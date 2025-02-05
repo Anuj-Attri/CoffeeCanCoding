@@ -7,6 +7,13 @@ Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
 
 '''
 Gist:
+Using sliding window, we initialize the first 'k' elements of 's' as the initial sliding window.
+Using a set for O(1) lookup, we add the vowels. The problem states that s is a lowercase string.
+Count the vowels in the first substring, and slide the window efficiently across by removing the previous element and adding the next.
+Update the max number of vowels by comparing current count to the previous count.
+
+Time: O(N)
+Space: O(1)
 '''
 
 class Solution:
