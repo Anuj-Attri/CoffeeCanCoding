@@ -6,7 +6,15 @@ A binary tree's maximum depth is the number of nodes along the longest path from
 
 '''
 Gist:
+Given the definition of tree node, we can recursively call the function to perform depth first search.
+The base case is when the root is 0, signifying a leaf node. 
+The maximum depth of any branch in a binary tree is the max(left child, right child).
+The child becomes the root, to check the depth of the branches recursively. 
+Recursion stops when an empty tree is found at the root.
+Adding 1 to the recursion adds the depth of the previous parent and moves on to the branch.
 
+Time: O(N)
+Space: O(N)
 '''
 
 # Definition for a binary tree node.
@@ -18,5 +26,5 @@ Gist:
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if not root:
-            return 0  # Base case: empty tree
+            return 0
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
