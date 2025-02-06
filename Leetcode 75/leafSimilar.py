@@ -9,6 +9,12 @@ Return true if and only if the two given trees with head nodes root1 and root2 a
 
 '''
 Gist:
+
+Using recursion, find traverse the trees to find the leaf nodes in both root1 and root2, and append them to an array 'leaves'.
+Comparing the two outputs of 'getleaves' will return if the two trees are leaf similar or not.
+
+Time: O(N)
+Space: O(N)
 '''
 # Definition for a binary tree node.
 # class TreeNode:
