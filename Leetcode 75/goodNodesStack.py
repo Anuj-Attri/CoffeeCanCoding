@@ -14,3 +14,25 @@ Time: O(N)
 Space: O(H)
 '''
 
+class Solution:
+    def goodNodes(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+
+        stack = [(root, root.val)]
+        good_nodes = 0
+
+        while stack:
+            node, max_so_far = stack.pop()
+
+            if node.val >= max_so_far:
+                good_nodes += 1
+
+            new_max = max(max_so_far, node.val)
+
+            if node.right:
+                stack.append((node.right, new_max))
+            if node.left:
+                stack.append((node.left, new_max))
+
+        return good_nodes
