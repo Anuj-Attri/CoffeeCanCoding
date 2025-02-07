@@ -7,7 +7,14 @@ Return the number of good nodes in the binary tree.
 
 '''
 Gist:
+Traverse the branches to look for ascending order of nodes, and increment the count for each time the condition is satisfied.
+Update the max value such that the new_max becomes the maximum between the value of current node and the previous maximum value.
+Use recursion to count the good nodes in both left and right branches.
+The initial values of max_so_far will be the root value, and the base condition is when the node is empty.
+Return the count.
 
+Time: O(N)
+Space: O(N)
 '''
 
 class Solution:
