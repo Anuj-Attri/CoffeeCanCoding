@@ -4,7 +4,13 @@ Given a binary array nums and an integer k, return the maximum number of consecu
 '''
 
 '''
+Gist:
+Using sliding window defined by two pointers, flip "0's" till k == 0. 
+If k < 0, revert the last flip and move the sliding window towards left.
+The final length of longest consecutive ones is (right - left + 1).
 
+Time: O(N)
+Space: O(1)
 '''
 class Solution:
     def longestOnes(self, nums: List[int], k: int) -> int:
