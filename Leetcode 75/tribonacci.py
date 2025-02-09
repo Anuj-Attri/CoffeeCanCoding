@@ -9,7 +9,12 @@ Given n, return the value of Tn.
 
 '''
 Gist:
+Only the three values are needed at any given point to find the value of Tn.
+Using the given general solution, substitute the variables till the loop runs out at (n+1).
+The swap returns the value of of Tn+3 for given n.
 
+Time: O(N)
+Space: O(1)
 '''
 class Solution:
     def tribonacci(self, n: int) -> int:
