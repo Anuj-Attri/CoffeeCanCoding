@@ -4,7 +4,16 @@ Given the root of a binary tree and an integer targetSum, return the number of p
 
 The path does not need to start or end at the root or a leaf, but it must go downwards (i.e., traveling only from parent nodes to child nodes).
 '''
+'''
+Gist:
+Using DFS, traverse the paths and store the sum in the defaultdict 'sum_count'.
+The left and right branches are traversed through recursion, and their sum added to paths.
+The number of paths leading to the target sum will be returned by the pathsum function.
 
+
+Time: O(N)
+Space: O(N)
+'''
 
 # Definition for a binary tree node.
 # class TreeNode:
