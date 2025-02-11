@@ -11,5 +11,15 @@ You can use the operations on either string as many times as necessary.
 Given two strings, word1 and word2, return true if word1 and word2 are close, and false otherwise.
 '''
 '''
+Gist:
 
 '''
+
+from collections import Counter
+
+class Solution:
+    def closeStrings(self, word1: str, word2: str) -> bool:
+        if set(word1) != set(word2):
+            return False
+
+        return sorted(Counter(word1).values()) == sorted(Counter(word2).values())
