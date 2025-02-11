@@ -12,7 +12,10 @@ Given two strings, word1 and word2, return true if word1 and word2 are close, an
 '''
 '''
 Gist:
+For strings to be close, their unique characters should match each other, and the frequency of these characters needs to be the same.
 
+Time: O(N)
+Space: O(1)
 '''
 
 from collections import Counter
