@@ -15,7 +15,7 @@ Gist:
 For strings to be close, their unique characters should match each other, and the frequency of these characters needs to be the same.
 
 Time: O(N)
-Space: O(1)
+Space: O(N)
 '''
 
 from collections import Counter
