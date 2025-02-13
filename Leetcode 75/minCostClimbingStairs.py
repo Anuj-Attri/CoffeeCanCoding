@@ -7,7 +7,18 @@ You can either start from the step with index 0, or the step with index 1.
 
 Return the minimum cost to reach the top of the floor.
 '''
+'''
+Gist:
+Initialize the cost of first two steps, and iterate over the remaining steps.
+Find the minimum of the last two costs, and add the current cost to it.
+Return the minimum of previous and current step.
 
+The optimized formula to use is defined as:
+next cost = min(previous cost, current cost) + current step
+
+Time: O(N)
+Space: O(1)
+'''
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
         prev, curr = cost[0], cost[1]
