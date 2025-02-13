@@ -4,3 +4,14 @@ Given a 0-indexed n x n integer matrix grid, return the number of pairs (ri, cj)
 
 A row and column pair is considered equal if they contain the same elements in the same order (i.e., an equal array).
 '''
+from collections import Counter
+
+class Solution:
+    def equalPairs(self, grid: List[List[int]]) -> int:
+        rows = Counter(tuple(row) for row in grid)
+        count = 0
+
+        for col in zip(*grid):
+            count += rows[col]
+
+        return count
