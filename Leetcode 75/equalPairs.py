@@ -4,6 +4,16 @@ Given a 0-indexed n x n integer matrix grid, return the number of pairs (ri, cj)
 
 A row and column pair is considered equal if they contain the same elements in the same order (i.e., an equal array).
 '''
+'''
+Gist:
+Convert the rows of the grid to a tuple and count their frequencies.
+Iterate over the transposed grid to obtain columns.
+Increment the count when the column is found in the Counter dict.
+
+Time: O(N+M)
+Space: O(N+M)
+
+'''
 from collections import Counter
 
 class Solution:
