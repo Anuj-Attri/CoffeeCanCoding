@@ -7,3 +7,13 @@ You can either start from the step with index 0, or the step with index 1.
 
 Return the minimum cost to reach the top of the floor.
 '''
+
+class Solution:
+    def minCostClimbingStairs(self, cost: List[int]) -> int:
+        prev, curr = cost[0], cost[1]
+
+        for i in range(2, len(cost)):
+            next_cost = min(prev, curr) + cost[i]
+            prev, curr = curr, next_cost
+
+        return min(prev, curr)
