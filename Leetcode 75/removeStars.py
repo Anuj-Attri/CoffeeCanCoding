@@ -11,3 +11,17 @@ Note:
 The input will be generated such that the operation is always possible.
 It can be shown that the resulting string will always be unique.
 '''
+
+
+class Solution:
+    def removeStars(self, s: str) -> str:
+        ans = []
+
+        for i in s:
+            if i == '*':
+                ans.pop()
+
+            else:
+                ans.append(i)
+
+        return "".join(ans)
