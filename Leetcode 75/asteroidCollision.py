@@ -12,7 +12,16 @@ If both are the same size, both will explode. Two asteroids moving in the same d
 
 '''
 Gist:
+Use a stack to maintain asteroids that haven't exploded.
+If the current asteroid moves right (+), push it to the stack.
+If the current asteroid moves left (-), check the stack.
 
+Compare with the top asteroid (if it's moving right, +).
+If the left-moving asteroid is smaller, it explodes.
+If the right-moving asteroid is smaller, pop it.
+
+Time: O(N)
+Space: O(N)
 '''
 
 class Solution:
