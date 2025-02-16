@@ -10,7 +10,14 @@ return the maximum amount of money you can rob tonight without alerting the poli
 '''
 '''
 Gist: 
+Using dynamic programming, check which houses to rob.
+If i is robbed, then rob the max amount up until i-1.
+if i is skipped, i - 1 and all previous houses can be robbed.
+Update the previous amounts with the maximum score from the above check.
+Return the prev1 rob.
 
+Time: O(N)
+Space: O(1)
 '''
 class Solution:
     def rob(self, nums: List[int]) -> int:
