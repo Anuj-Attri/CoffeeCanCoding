@@ -11,7 +11,14 @@ For example, there will not be input like 3a or 2[4].
 The test cases are generated so that the length of the output will never exceed 105.
 '''
 '''
+Gist:
+Use a stack to store numbers (k) and partial results (decoded substring).
+When encountering ], pop the last stored string and repeat it k times.
+Use a separate variable (num) to track multi-digit numbers.
+Process characters sequentially and construct the result dynamically.
 
+Time: O(N)
+Space: O(N)
 '''
 class Solution:
     def decodeString(self, s: str) -> str:
