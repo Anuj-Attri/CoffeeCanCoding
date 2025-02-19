@@ -12,6 +12,21 @@ The round-based procedure starts from the first senator to the last senator in t
 
 Suppose every senator is smart enough and will play the best strategy for his own party. Predict which party will finally announce the victory and change the Dota2 game. The output should be "Radiant" or "Dire".
 '''
+
+'''
+Gist:
+Store initial indices of R and D in separate queues.
+
+Simulate rounds:
+The senator with the earlier index gets to ban first.
+The banned senator is removed.
+The banning senator moves to the next round by adding n to its index. 
+
+Continue until one queue is empty. Return the winning party based on which queue is not empty.
+
+Time: O(N)
+Space: O(N)
+'''
 from collections import deque
 
 class Solution:
