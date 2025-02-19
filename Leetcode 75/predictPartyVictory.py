@@ -12,3 +12,30 @@ The round-based procedure starts from the first senator to the last senator in t
 
 Suppose every senator is smart enough and will play the best strategy for his own party. Predict which party will finally announce the victory and change the Dota2 game. The output should be "Radiant" or "Dire".
 '''
+from collections import deque
+
+class Solution:
+    def predictPartyVictory(self, senate: str) -> str:
+        radiant_queue = deque()
+        dire_queue = deque()
+        n = len(senate)
+
+        # Store senator indices in queues
+        for i, s in enumerate(senate):
+            if s == 'R':
+                radiant_queue.append(i)
+            else:
+                dire_queue.append(i)
+
+        # Process rounds until one queue is empty
+        while radiant_queue and dire_queue:
+            r_index = radiant_queue.popleft()
+            d_index = dire_queue.popleft()
+
+            # The senator with the smaller index bans the opponent
+            if r_index < d_index:
+                radiant_queue.append(r_index + n)  # Push back to queue for next round
+            else:
+                dire_queue.append(d_index + n)
+
+        return "Radiant" if radiant_queue else "Dire"
